@@ -72,7 +72,7 @@ from
   join categories c on c.category_id = sc.category_id
   join product_groups pg on pg.group_id = c.group_id
 where
-  dp.discount_end >= (now() at time zone 'Europe/Bratislava')
+  dp.discount_end >= (now() at time zone 'Europe/Bratislava')::date
 order by
   pg.group_name,
   c.category_name,
