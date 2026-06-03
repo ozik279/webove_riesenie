@@ -1,0 +1,60 @@
+/* js/components/dynamicNavbar.css */
+
+/* Base: hide menus unless shown by hover (desktop) or .open/.show (mobile) */
+#navbar .dynamic-navbar .dropdown-menu {
+    display: none;
+}
+
+/* Mobile/tablet: Bootstrap may add .show; nested submenu uses .open from your JS */
+#navbar .dynamic-navbar .dropdown-menu.show {
+    display: block;
+}
+#navbar .dynamic-navbar .dropend.open > .dropdown-menu {
+    display: block;
+}
+
+/* Mobile/tablet: stack nested submenu under the category item */
+@media (max-width: 1387px) {
+    #navbar .dynamic-navbar .dropend > .dropdown-menu {
+        position: static;
+        inset: auto;
+        transform: none;
+        margin-left: 0;
+    }
+}
+
+/* Desktop: hover menus for the whole navbar (group + nested), ignore .open */
+@media (min-width: 1388px) {
+    #navbar .dynamic-navbar .dropdown-menu {
+        overflow: visible;
+    }
+
+    /* Top-level group dropdown */
+    #navbar .dynamic-navbar .nav-item.dropdown:hover > .dropdown-menu {
+        display: block;
+    }
+
+    /* Nested submenu (dropend) */
+    #navbar .dynamic-navbar .dropend {
+        position: relative;
+    }
+
+    #navbar .dynamic-navbar .dropend > .dropdown-menu {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        display: none;
+    }
+
+    #navbar .dynamic-navbar .dropend:hover > .dropdown-menu {
+        display: block;
+    }
+
+    /* Ensure leftover mobile state never shows on desktop */
+    #navbar .dynamic-navbar .dropend.open > .dropdown-menu {
+        display: none;
+    }
+    #navbar .dynamic-navbar .dropdown-menu.show {
+        display: none;
+    }
+}

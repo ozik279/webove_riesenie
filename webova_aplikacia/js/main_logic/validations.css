@@ -1,0 +1,7 @@
+.valid {
+    border-color: green !important;
+}
+
+.invalid {
+    border-color: red !important;
+}

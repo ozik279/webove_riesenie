@@ -1,0 +1,18 @@
+{
+  "devDependencies": {
+    "@types/jest": "^29.2.5",
+    "jest": "^29.3.1",
+    "vite": "^8.0.14"
+  },
+  "scripts": {
+    "dev": "vite",
+    "test": "jest",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.89.0",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^4.1.0"
+  }
+}

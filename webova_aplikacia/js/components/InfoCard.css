@@ -1,0 +1,149 @@
+.card {
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #f0f0f0;
+    width: 220px;
+    height: 360px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.card p, span, label {
+    color: #333;
+}
+
+.content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    /*height: calc(100% - 225px);*/
+}
+
+.main-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.img-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.img-container img {
+    width: auto;
+    height: 180px;
+    object-fit: contain;
+    max-width: 100%;
+}
+
+h2 {
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+span {
+    font-size: 0.93rem;
+}
+
+hr {
+    width: 100%;
+    margin-top: 10px;
+    border: 0;
+    border-top: 1px solid #d1d5db; /* visible line */
+    height: 0; /* prevents a thick bar */
+    box-sizing: border-box;
+}
+
+
+label{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    margin-top: auto;
+    border-top: 1px solid #ccc;
+    padding-top: 0.85rem;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.supermarket-sticker{
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    background: rgba(255,255,255,0.95);
+    border-radius: 10px;
+    padding: 6px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+    z-index: 3;
+    pointer-events: none;
+}
+
+.save-button {
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: yellowgreen;
+    width: 42px;
+    height: 42px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.4rem;
+    transition: transform 0.2s;
+}
+
+.save-button:hover {
+    background-color: #00703c;
+    transition: background-color 0.2s;
+    transform: scale(1.1);
+}
+
+.delete-button {
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: red;
+    width: 42px;
+    height: 42px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.4rem;
+    transition: transform 0.2s;
+}
+
+.delete-button:hover {
+    background-color: #a30000;
+    transition: background-color 0.2s;
+    transform: scale(1.1);
+}
+
+.discount-ended{
+    opacity: 0.35;
+
+}
+
+
+
+
+
+

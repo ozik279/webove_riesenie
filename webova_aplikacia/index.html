@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hlavná stránka</title>
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./js/components/search.css">
+    <link rel="stylesheet" href="./js/main_logic/downloadToPDFButton.css">
+    <link rel="stylesheet" href="./js/components/dynamicNavbar.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+          crossorigin="anonymous">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+    <!-- Font Awesome JS-->
+    <script src="https://kit.fontawesome.com/2f3faae799.js" crossorigin="anonymous"></script>
+
+    <script defer type="module" src="./js/index.js"></script>
+</head>
+<body>
+
+    <div class="site-header">
+        <div class="container" id="upper-container" style="justify-content: center; flex-direction: row; margin-top: 0">
+            <button id="download-pdf-button" class="action-button">
+                <i id="pdf-icon" class="fas fa-file-pdf"></i>
+            </button>
+
+            <form id="search-bar" style="width: 100%">
+                <label for="productSearchInput"></label>
+                <input id="productSearchInput" class="form-control" type="text" placeholder="vegan, coca-cola, farmárske kura, slané pečivo, sladkosti, billa...  " autocomplete="off">
+                <button type="submit">Vyhľadaj</button>
+            </form>
+
+            <button id="login-button" class="action-button">
+                <i id="login-icon" class="fa-solid fa-user"></i>
+            </button>
+        </div>
+
+        <header>
+
+            <!-- Bootstrap 5 Navbar -->
+            <nav id="navbar" class="navbar navbar-expand-xxl bg-body-tertiary mb-3 mt-3" style="background-color: yellowgreen !important;">
+            </nav>
+
+        </header>
+    </div>
+
+
+
+    <main class="py-3">
+        <!-- page content -->
+
+        <div>
+            <h1 class="text-center mb-4">Vitajte na porovnávači cien potravín</h1>
+            <p class="text-center mb-4">Táto stránka vám umožní porovnávať ceny potravín a ďalších produktov z vybraných
+                supermarketov a nájsť tie najlepšie ponuky.</p>
+        </div>
+
+        <div class="text-center">
+            <div class="container flex-row" style="gap: 0.5rem;">
+                <span>Posledná aktualizácia údajov: </span>
+                <span id="lastScrapeDateTime"></span>
+            </div>
+            <div class="container flex-row" style="gap: 0.5rem;">
+                <span>Dáta brané z:</span>
+                <a href="https://promotheus.sk/">https://promotheus.sk/</a>
+            </div>
+            <div class="container flex-row" style="gap: 0.5rem;">
+                <span>Ikonky zobrané z:</span>
+                <a href="https://www.flaticon.com">https://www.flaticon.com</a>
+            </div>
+            <hr>
+            <div class="container">
+                <span>Sledované supermarkety a drogérie:</span>
+            </div>
+        </div>
+
+        <div class="container mb-4">
+            <a href="https://www.tesco.sk/akciove-ponuky/letaky-a-katalogy/" target="_blank">
+                <div class="card supermarket-letter">
+                    <img src="./imagesForSupermarketLetters/tesco.1.jpeg"
+                         alt="Tesco leták">
+                </div>
+            </a>
+
+            <a href="https://predajne.kaufland.sk/aktualna-ponuka/letak.html" target="_blank">
+                <div class="card supermarket-letter">
+                    <img src="./imagesForSupermarketLetters/kaufland.png"
+                         alt="Kaufland leták">
+                </div>
+            </a>
+
+            <a href="https://www.billa.sk/letaky-a-akcie/aktualny-letak" target="_blank">
+                <div class="card supermarket-letter">
+                    <img src="./imagesForSupermarketLetters/Billa.png"
+                         alt="Billa leták">
+                </div>
+            </a>
+
+            <a href="https://www.lidl.sk/c/online-letak/s10008489" target="_blank">
+                <div class="card supermarket-letter">
+                    <img src="./imagesForSupermarketLetters/Lidl.png"
+                         alt="Lidl leták">
+                </div>
+            </a>
+
+            <a href="https://www.metro.sk/aktualna-ponuka" target="_blank">
+                <div class="card supermarket-letter">
+                    <img src="./imagesForSupermarketLetters/Metro.png"
+                         alt="Metro leták">
+                </div>
+            </a>
+
+            <a href="https://coop.sk/sk/interaktivny-letak" target="_blank">
+                <div class="card supermarket-letter">
+                    <img src="./imagesForSupermarketLetters/coop-jednota-letak-img.png"
+                         alt="COOP jendnota leták">
+                </div>
+            </a>
+
+            <a href="https://terno.sk/sekcia/7-akciovy-letak" target="_blank">
+                <div class="card supermarket-letter">
+                    <img src="./imagesForSupermarketLetters/terno-img.jpg"
+                         alt="Terno leták">
+                </div>
+            </a>
+
+            <a href="https://www.mojadm.sk/" target="_blank">
+                <div class="card supermarket-letter">
+                    <img src="./imagesForSupermarketLetters/dm_drogeria.png"
+                         alt="DM drogeria leták">
+                </div>
+            </a>
+
+            <a href="https://101drogerie.sk/online-letak/letak-2026-2" target="_blank">
+                <div class="card supermarket-letter">
+                    <img src="./imagesForSupermarketLetters/101_drogeria.png"
+                         alt="101 drogeria leták">
+                </div>
+            </a>
+        </div>
+
+        <div class="container">
+            <span style="text-align: center;">
+            Letáky sú len ilustračné a sú prevzaté z oficiálnych letákov jednotlivých supermarketov a drogérií.<br>
+            Kliknutím na obrázok sa dostanete priamo na aktuálny leták daného supermarketu alebo drogérie.
+        </span>
+        </div>
+    </main>
+
+    <footer class="site-footer mt-auto">
+        <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2 py-3">
+            <small class="text-muted mb-0">©2026 Bakalárka</small>
+            <div class="d-flex align-items-center gap-3">
+                <a class="footer-link" href="./index.html">Home</a>
+                <a class="footer-link" href="mailto:ozik27@example.com">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>
