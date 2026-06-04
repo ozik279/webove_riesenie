@@ -36,7 +36,7 @@ stores = [
 keywords: dict[str, dict[str, list[str]]] = {
     "02_chladene": {
         "01_maso": [
-            "bageta",
+            "kuracie-maeso",
             "hovaedzie-maeso",
             "kacacie-maeso",
             "slanina",
